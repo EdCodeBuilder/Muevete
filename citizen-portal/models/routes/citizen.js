@@ -5,7 +5,7 @@ export default {
   CITIZEN_STATUS: () => `${api}/${prefix}/status`,
   CITIZEN_STAGES: () => `${api}/${prefix}/stages`,
   CITIZEN_PROGRAMS: () => `${api}/${prefix}/programs`,
-  CITIZEN_ACTIVITIES: () => `${api}/${prefix}/activities`, // 21-07-2022 cambio de ruta /activities a /activity-asisstances
+  CITIZEN_ACTIVITIES: () => `${api}/${prefix}/activity-asisstances`, // 21-07-2022 cambio de ruta /activities a /activity-asisstances
   CITIZEN_ACTIVITY_ASSISTANCES: () => `${api}/${prefix}/activity-asisstances`,
   CITIZEN_AGES: () => `${api}/${prefix}/age-groups`,
   CITIZEN_WEEK_DAYS: () => `${api}/${prefix}/week-days`,
