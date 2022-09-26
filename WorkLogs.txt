@@ -1,0 +1,64 @@
+Trabajo en desarrollo proyecto IDRD – Muévete: – Función de registros de personas en actividades. – Pagina pública para registro.
+11:39am – despliegue de proyecto.
+11:49am – intento de inicio de sesión.
+11:50am – Código de error:
+Error: 500
+No hay comunicación con el servidor
+{ "message": "Network Error", "name": "Error", "stack": "Error: Network Error\n at createError (http://localhost:3000/portal-ciudadano-administrador/_nuxt/commons/app.js:1295:15)\n at XMLHttpRequest.handleError (http://localhost:3000/portal-ciudadano-administrador/_nuxt/commons/app.js:784:14)", "config": { "url": "/api/citizen-portal/login", "method": "post", "data": "{\"username\":\"Hector.Velasquez\",\"password\":\"Aredep490*\",\"remember\":false}", "headers": { "Accept": "application/json", "X-Localization": "es", "X-Requested-With": "XMLHttpRequest", "Content-Type": "application/json" }, "baseURL": "http://localhost:8000/", "transformRequest": [ null ], "transformResponse": [ null ], "timeout": 0, "xsrfCookieName": "XSRF-TOKEN", "xsrfHeaderName": "X-XSRF-TOKEN", "maxContentLength": -1, "maxBodyLength": -1, "propertyName": "access_token", "cancelToken": { "promise": {} } } }
+11:51am – intento de petición de token de autenticación por postman.
+11:52am – confirmación de respuesta de la API.
+Respuesta: 
+{
+    "token_type": "Bearer",
+    "expires_in": 28769,
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgzODVlM2I4MzllMTQyMzBhNTQyZGRiZGNmZGM1ODRjZGU2NjkyNDM5MTNhYTUzYjZmMzc0NmQ3NTA2OGVhM2Y5NDUwZDllNzU0NDlmYzk0In0.eyJhdWQiOiIyIiwianRpIjoiODM4NWUzYjgzOWUxNDIzMGE1NDJkZGJkY2ZkYzU4NGNkZTY2OTI0MzkxM2FhNTNiNmYzNzQ2ZDc1MDY4ZWEzZjk0NTBkOWU3NTQ0OWZjOTQiLCJpYXQiOjE2NjQyMTExNjcsIm5iZiI6MTY2NDIxMTE2NywiZXhwIjoxNjY0MjM5OTM2LCJzdWIiOiI3NTIiLCJzY29wZXMiOltdfQ.fdawmL7CfIyWhYWdQoSfEhJzawd2AXos4ISaMfVfyAOpOZIvcswiBXY7q007Eg2ydRr1iipCY3LwT1-vcPa5r7nNLr3S1g_mupxmhMVjp9BfsxVOJtrwSwHkJQQ91He3wAWlK6cqJL-ILtLw89Kn4dEYuLGRKcEQBvVb61MzXc5wYYfGXoN_1MhgGIsM4lmxr4UfF0AjUDdkAEsp3v1i-6aQOIu9IQ4qV726aPP6KiLFKjYZqk5YLaGwjfdcrJOc87LqSyA81xSYxMmaC0YusLkLAEdm3nfXqsJxWGwi2bWGGHHWWDL-rBkUC7K5WGJiCVlGIbS7-oda0arjMdW2288D-EqHXGvYmOxd1hz4i69fIFZNepbA2by2hvWoza_3X95vfDk9pgs19RjUWu4CEbxUNz1Xv7q6BBz6XWOyRe1qOLEegB_mJOgh4Zf9d6jyAr3-IZ9sosEkivYP2hjq5Z1LOuN01NxTTus17wN0FG2kx6iyRe-ocnioHOsRT9n2QgOpGdvUG-H3kJzuEVnPQ14FxZ7zO6wx4I3hzj9g32JTqWIuPVM4rC-AV_1qxL3jGPttC2C_ZDmo3Tf5803iheWsKHnye1W3ItWps39pSZqkZCfcvEj16T6ZlBDirBl0bIIrnwlLRp3ac83UDlxq7Puf-l_Ea5nFl2tqgilosYU",
+    "refresh_token": "def502003319a1138377e34e7aa03bdf258a86ceaecc2d07c95ac381a008ae826e67d11a576b328f3bd05b372d2369308375bc3fdc394e4e538b59c69946ee61a04391b404282f9becd923f96995546ae1ec6fc14a6d06ddb05668368c328979dc450054187652a6331909560873d5c7f6bd3fc9ea349551d74ae0ee492f3ffd110bc7694223a26d26b1e2a2219391d8d9067ce5f9f6752cc2dc9325f750236a5a4fc33244861e359f345265b24f91d487af6c1b3c3c55336be105941dc0c44c86622be106d665c8a77d4c0c303018615137773a3e9094bd51cd559c012612fe200f87cde074267a30c2d3703ec56e48644ffe185f282a52c2120badb7194f7495bee02249db2b24134d4ae8b041c00c8eedc2a54db50295408189213d14ab54bf6738c4feefbaff26bab8521fcadf5bc4c19a1518b3c302a3f600933a785c743d74c433c17262d792e42d3c4dee535b235694eb6c064f64596cbd914fde58103775df"
+}
+11:53am – revisión de políticas de privacidad cliente de Google Chrome en seguridad.
+11:55am – la opción de privacidad y seguridad esta desactivada, posibles inconvenientes con CORS.
+11:56am – prueba de acceso con Mozilla Firefox con función recuérdame.
+12pm – Confirmación de acceso desde Mozilla Firefox.
+12:01pm – Acceso al módulo actividades.
+12:02pm – Carga correcta de datos y botones de actividades.
+12:03pm – Almuerzo.
+1:44pm – Refresco de la página http://192.168.20.39:3000/portal-ciudadano-administrador/ en depuración.
+1:46pm – Expulsión del sistema, de nuevo a ventana de login.
+1:47pm – prueba de acceso con Mozilla Firefox con función recuérdame.
+1:48pm – Confirmación de acceso desde Mozilla Firefox.
+1:49pm – Acceso al módulo actividades.
+1:50pm – Carga correcta de datos y botones de actividades.
+1:51pm – Prueba de eliminación de registro.
+1:55pm – Mensaje de error: No estás autorizado para esta solicitud.
+1:58pm – Debug desde consola sobre el mensaje de error.
+2:09pm – No he podido identificar en que punto se realiza la petición de eliminación del registro.
+2:10pm – Búsqueda de la ruta desde el backend en laravel.
+2:11pm – Refresco de página de actividades.
+2:12pm – Llamada inge Johann.
+2:20pm – Envió de enlace de asistencia a reunión presencial de la contraloría el miércoles 28.
+2:21pm – Modificación de asistencia para reunión de naming de microfinanzas.
+2:22pm – Aceptación de reunión de documentación y capacitación para desarrollo de microfinanzas.
+2:25pm – Fin de llamada inge Johann.
+2:40pm – revisión de petición de la ruta: http://192.168.20.39:3000/portal-ciudadano-administrador/es/actividades.
+2:43pm – Se cierra la pestaña en depuración.
+2:43pm – Nuevo intento de refresco de página: http://192.168.20.39:3000/portal-ciudadano-administrador/es/actividades.
+2:45pm – Identificación de petición: http://localhost:8000/api/user.
+2:45pm – Búsqueda de la ruta anterior en el código fuente.
+2:55pm – Kickout de la aplicación.
+2:56pm – Inicio de sesión nuevamente.
+3:00pm – Identificación de variables PASSPORT de .env de back como parte del proceso de login, parece un proceso de login antecesor del módulo citizen portal.
+3:10pm – identificación de método de login attemptLogin() en la ruta: LDAP\base-ldap\app\Modules\CitizenPortal\src\Controllers\UserController.php
+3:21pm – Configuración del debugger de vscode para Firefox.
+3:22pm – Inicio de sesión en el debugger de vscode para Firefox.
+3:24pm – Instalación de extensión VueDevtools para cliente Firefox.
+3:40pm – identificación de método logout() en ruta: LDAP\base-ldap\app\Http\Controllers\Auth\LoginController.php.
+3:24pm – Inicio de sesión con función recuérdame.
+4:02pm – Prueba de ruta: http://192.168.20.39:3000/portal-ciudadano-administrador/es/actividades.
+4:13pm – Correcciones de Constantes relacionado con los modelos Activity y Activiti_assistance.
+4:16pm – Refresco de ruta: http://localhost:3000/portal-ciudadano-administrador Kickout de sesión.
+4:17pm – inicio de sesión con función recuérdame.
+4:22pm – Acceso al dashboard en 2 minutos.
+4:29pm – Cambio de match ‘ACTIVITIES’ con ‘ACTIVITY_ASSISTANCES’.
+4:48pm – Modificación de pathMapping de launch.json para realizar la depuración adecuada.
+6:01pm – Revisión de Matches para ‘ACTIVITIES’.
+6:21pm – Modificación de Matches de ‘activity-asisstances’ a ‘activityasisstances’.
+6:22pm – Se siguen presentando inconvenientes con el permiso del módulo.
