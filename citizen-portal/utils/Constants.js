@@ -6,6 +6,7 @@ const ROLE_ASSIGNOR = `${IDENTIFIER}-assignor`
 const ROLE_VALIDATOR = `${IDENTIFIER}-validator`
 
 const ACTIVITIES = 'Activity'
+const ACTIVITY_ASSISTANCES = 'Activityasisstances'
 const AGES = 'AgeGroup'
 const CITIZENS = 'Citizen'
 const CITIZEN_SCHEDULES = 'CitizenSchedule'
@@ -40,6 +41,7 @@ export const Constants = {
   },
   Models: {
     ACTIVITIES,
+    ACTIVITY_ASSISTANCES,
     AGES,
     AUDITS,
     CITIZENS,
