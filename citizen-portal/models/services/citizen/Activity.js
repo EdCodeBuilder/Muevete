@@ -24,12 +24,12 @@ const formData = {
   updated_at: null,
 }
 
-export class Activity extends Model {
+export class AssistanceActivity extends Model {
   constructor(data = formData) {
     super(Api.END_POINTS.CITIZEN_ACTIVITIES(), data)
   }
 
   clone(data = formData) {
-    return new Activity(data)
+    return new Activityasisstances(data)
   }
 }
