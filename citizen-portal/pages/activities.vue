@@ -56,7 +56,9 @@ export default {
     permissionsUrl: Api.END_POINTS.CITIZEN_PERMISSIONS(),
     permissions(bouncer, to, from) {
       const service = new AbilityService()
-      const abilities = service.manageAbilities(service.models.ACTIVITIES)
+      const abilities = service.manageAbilities(
+        service.models.ACTIVITY_ASSISTANCES
+      )
       return bouncer.canAny(abilities)
     },
   },
@@ -68,16 +70,24 @@ export default {
   }),
   computed: {
     canCreateAction() {
-      return this.canManageOrCreate(this.ability_service.models.ACTIVITIES)
+      return this.canManageOrCreate(
+        this.ability_service.models.ACTIVITY_ASSISTANCES
+      )
     },
     canUpdateAction() {
-      return this.canManageOrUpdate(this.ability_service.models.ACTIVITIES)
+      return this.canManageOrUpdate(
+        this.ability_service.models.ACTIVITY_ASSISTANCES
+      )
     },
     canDeleteAction() {
-      return this.canManageOrDestroy(this.ability_service.models.ACTIVITIES)
+      return this.canManageOrDestroy(
+        this.ability_service.models.ACTIVITY_ASSISTANCES
+      )
     },
     canViewHistoryAction() {
-      return this.canViewHistory(this.ability_service.models.ACTIVITIES)
+      return this.canViewHistory(
+        this.ability_service.models.ACTIVITY_ASSISTANCES
+      )
     },
   },
 }

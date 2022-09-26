@@ -16,7 +16,7 @@ const formData = {
 
 export class AssistanceActivity extends Model {
   constructor(data = formData) {
-    super(Api.END_POINTS.CITIZEN_ACTIVITIES(), data)
+    super(Api.END_POINTS.CITIZEN_ACTIVITY_ASSISTANCES(), data)
   }
 
   clone(data = formData) {
