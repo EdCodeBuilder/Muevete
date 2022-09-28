@@ -29,6 +29,10 @@
       },
       "pathMappings": [
         {
+          "url": "webpack:///pages",
+          "path": "${workspaceFolder}/citizen-portal/pages"
+        },
+        {
           "url": "webpack:///middleware",
           "path": "${workspaceFolder}/citizen-portal/middleware"
         },
