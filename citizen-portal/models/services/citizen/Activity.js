@@ -30,6 +30,6 @@ export class AssistanceActivity extends Model {
   }
 
   clone(data = formData) {
-    return new Activityasisstances(data)
+    return new AssistanceActivity(data)
   }
 }
