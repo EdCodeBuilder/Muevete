@@ -7,7 +7,7 @@ namespace App\Modules\CitizenPortal\src\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Security\User;
 use App\Modules\CitizenPortal\src\Constants\Roles;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use App\Modules\CitizenPortal\src\Models\CitizenSchedule;
 use App\Modules\CitizenPortal\src\Models\Schedule;
 use App\Modules\CitizenPortal\src\Request\ActivityRequest;
@@ -29,7 +29,7 @@ class ActivityController extends Controller
             Roles::canAny([
                 [
                     'actions'   => 'view_or_manage',
-                    'model'     => Activity::class
+                    'model'     => ActivityAsisstance::class
                 ],
                 ['model' => CitizenSchedule::class, 'actions' => 'status'],
                 ['model' => CitizenSchedule::class, 'actions' => 'view_or_manage'],
@@ -40,11 +40,11 @@ class ActivityController extends Controller
             ], true, true)
         )
             ->only('index');
-        $this->middleware(Roles::actions(Activity::class, 'create_or_manage'))
+        $this->middleware(Roles::actions(ActivityAsisstance::class, 'create_or_manage'))
             ->only('store');
-        $this->middleware(Roles::actions(Activity::class, 'update_or_manage'))
+        $this->middleware(Roles::actions(ActivityAsisstance::class, 'update_or_manage'))
             ->only('update');
-        $this->middleware(Roles::actions(Activity::class, 'destroy_or_manage'))
+        $this->middleware(Roles::actions(ActivityAsisstance::class, 'destroy_or_manage'))
             ->only('destroy');
     }
 
@@ -53,11 +53,11 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        $query = $this->setQuery(Activity::query(), (new Activity)->getSortableColumn($this->column))
+        $query = $this->setQuery(ActivityAsisstance::query(), (new ActivityAsisstance)->getSortableColumn($this->column))
             ->when(isset($this->query), function ($query) {
                 return $query->where('activity_name', 'like', "%$this->query%");
             })
-            ->orderBy((new Activity)->getSortableColumn($this->column), $this->order);
+            ->orderBy((new ActivityAsisstance)->getSortableColumn($this->column), $this->order);
         return $this->success_response(
             ActivityResource::collection(
                 (int) $this->per_page > 0
@@ -77,7 +77,7 @@ class ActivityController extends Controller
      */
     public function store(ActivityRequest $request)
     {
-        $model = new Activity();
+        $model = new ActivityAsisstance();
         $attrs = $model->fillModel($request->validated());
         $model->fill($attrs);
         $model->save();
@@ -89,10 +89,10 @@ class ActivityController extends Controller
 
     /**
      * @param ActivityRequest $request
-     * @param Activity $activity
+     * @param ActivityAsisstance $activity
      * @return JsonResponse
      */
-    public function update(ActivityRequest $request, Activity $activity)
+    public function update(ActivityRequest $request, ActivityAsisstance $activity)
     {
         $attrs = $activity->fillModel($request->validated());
         $activity->fill($attrs);
@@ -103,11 +103,11 @@ class ActivityController extends Controller
     }
 
     /**
-     * @param Activity $activity
+     * @param ActivityAsisstance $activity
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Activity $activity)
+    public function destroy(ActivityAsisstance $activity)
     {
         $activity->delete();
         return $this->success_message(

@@ -187,7 +187,7 @@ class Schedule extends Model implements Auditable
      */
     public function activities()
     {
-        return $this->belongsTo( Activity::class, 'activity_id', 'id');
+        return $this->belongsTo( ActivityAsisstance::class, 'activity_id', 'id');
     }
 
     /**

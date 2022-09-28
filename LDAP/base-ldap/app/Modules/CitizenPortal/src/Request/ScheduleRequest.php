@@ -6,7 +6,7 @@ namespace App\Modules\CitizenPortal\src\Request;
 
 
 use App\Modules\CitizenPortal\src\Constants\Roles;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use App\Modules\CitizenPortal\src\Models\Day;
 use App\Modules\CitizenPortal\src\Models\Hour;
 use App\Modules\CitizenPortal\src\Models\Program;
@@ -39,7 +39,7 @@ class ScheduleRequest extends FormRequest
         $weekday = new Day();
         $daily = new Hour();
         $program = new Program();
-        $activity = new Activity();
+        $activity = new ActivityAsisstance();
         $stage = new Stage();
         return [
             'weekday_id'     =>  [

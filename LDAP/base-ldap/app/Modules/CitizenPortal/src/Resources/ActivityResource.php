@@ -5,7 +5,7 @@ namespace App\Modules\CitizenPortal\src\Resources;
 
 
 use App\Modules\CitizenPortal\src\Constants\Roles;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Str;
 
@@ -27,7 +27,7 @@ class ActivityResource extends JsonResource
             'updated_at'    =>  isset($this->updated_at) ? $this->updated_at->format('Y-m-d H:i:s') : null,
             'audits'       => $this->when(
                 auth('api')->check() &&
-                auth('api')->user()->can(Roles::can(Activity::class,'history'), Activity::class),
+                auth('api')->user()->can(Roles::can(ActivityAsisstance::class,'history'), ActivityAsisstance::class),
                 AuditResource::collection($this->audits()->latest()->get()),
                 []
             )

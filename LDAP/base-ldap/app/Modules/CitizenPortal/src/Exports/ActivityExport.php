@@ -3,7 +3,7 @@
 namespace App\Modules\CitizenPortal\src\Exports;
 
 use App\Modules\CitizenPortal\src\Constants\Roles;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use App\Modules\CitizenPortal\src\Models\File;
 use App\Modules\CitizenPortal\src\Models\Observation;
 use App\Modules\CitizenPortal\src\Models\Profile;
@@ -30,7 +30,7 @@ class ActivityExport implements FromQuery, WithMapping, WithHeadings, WithColumn
      */
     public function query()
     {
-        return Activity::query();
+        return ActivityAsisstance::query();
     }
 
     /**

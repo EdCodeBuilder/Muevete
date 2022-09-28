@@ -32,7 +32,7 @@ meta:
 <script>
 import { Api } from '~/models/Api'
 import { Menu } from '~/models/services/citizen/Menu'
-import { Activity } from '~/models/services/citizen/Activity'
+import { AssistanceActivity } from '~/models/services/citizen/Activity'
 import AbilityService from '~/models/services/citizen/AbilityService'
 
 export default {
@@ -66,7 +66,7 @@ export default {
     this.drawerModel = new Menu()
   },
   data: () => ({
-    model: new Activity(),
+    model: new AssistanceActivity(),
   }),
   computed: {
     canCreateAction() {

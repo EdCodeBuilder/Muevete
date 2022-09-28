@@ -9,7 +9,7 @@ use App\Modules\CitizenPortal\src\Constants\Roles;
 use App\Modules\CitizenPortal\src\Exports\Excel as ExcelRaw;
 use App\Modules\CitizenPortal\src\Exports\TemplateExport;
 use App\Modules\CitizenPortal\src\Imports\Excel;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use App\Modules\CitizenPortal\src\Models\CitizenSchedule;
 use App\Modules\CitizenPortal\src\Models\Day;
 use App\Modules\CitizenPortal\src\Models\Hour;
@@ -302,7 +302,7 @@ class ScheduleController extends Controller
         $weekday = new Day();
         $daily = new Hour();
         $program = new Program();
-        $activity = new Activity();
+        $activity = new ActivityAsisstance();
         $stage = new Stage();
 
         $attributes = [];

@@ -6,7 +6,7 @@ namespace App\Modules\CitizenPortal\src\Request;
 
 
 use App\Modules\CitizenPortal\src\Constants\Roles;
-use App\Modules\CitizenPortal\src\Models\Activity;
+use App\Modules\CitizenPortal\src\Models\ActivityAsisstance;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ActivityRequest extends FormRequest
@@ -19,8 +19,8 @@ class ActivityRequest extends FormRequest
     public function authorize()
     {
         $permission = toLower($this->getMethod()) == 'post'
-            ? Roles::can(Activity::class,'create_or_manage', true)
-            : Roles::can(Activity::class,'update_or_manage', true);
+            ? Roles::can(ActivityAsisstance::class,'create_or_manage', true)
+            : Roles::can(ActivityAsisstance::class,'update_or_manage', true);
         return auth('api')->user()->hasAnyPermission($permission);
     }
 

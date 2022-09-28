@@ -38,7 +38,7 @@ class ActivityAsisstance extends Model implements Auditable
      */
     public function activity()
     {
-        return $this->belongsTo(Activity::class);
+        return $this->belongsTo(Activity::class, 'activity_id', 'id');
     }
 
     /**
