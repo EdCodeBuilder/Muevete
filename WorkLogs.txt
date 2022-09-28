@@ -62,3 +62,35 @@ Respuesta:
 6:01pm – Revisión de Matches para ‘ACTIVITIES’.
 6:21pm – Modificación de Matches de ‘activity-asisstances’ a ‘activityasisstances’.
 6:22pm – Se siguen presentando inconvenientes con el permiso del módulo.
+Trabajo 27-09-2022
+6:43am – Despliegue de desarrollo de proyecto.
+7:10am – Cambio en la línea 33 ‘Activityasisstances’ -> ‘AssistanceActivity’ path: citizen-portal\models\services\citizen\Activity.js
+7:13am – Inicio de sesión en aplicativo.
+7:15am – Mensaje de error 500.
+7:20am – Modificación de configuraciones de seguridad de cliente Firefox para debug.
+7:25am – Reinicio de servidores.
+7:28am – Inicio de sesión en aplicativo.
+7:29am – Acceso exitoso.
+7:30am – Intento de acceso a vista de actividades.
+7:32am – Mensaje: no tienes acceso a este módulo.
+8:40am – Comparación con winmerge con proyecto base para revisión.
+8:45am – Modificación de archivo: citizen-portal\models\services\citizen\Admin.js eliminación de objeto admin que había sido adicionado en comparación al proyecto original.
+8:50am – Deshacer acción anterior, hace parte de la vista admin trabajada anteriormente, no hay relación directa con la vista actividades.
+8:55am – Modificación de registros de los modelos Activity a ActivityAssistance.
+9:00am – Pensamiento: si se modifican los modelos de Activity a ActivityAssistance en todas las relaciones del ORM ¿tendrá algún inconveniente si en la DB existe un registro que no encuentre la llave foránea?
+9:10am – Modificación de los modelos (de Activity a ActivityAssistance) en los diferentes archivos del back.
+12:33pm – Lectura de documentación BelongsTo() de laravel indica que los argumentos están correctos para el remplazo en el modelo Schedule del módulo citizen portal.
+1:47pm – Modificación de los modelos (de Activity a ActivityAssistance) en los diferentes archivos del front.
+2:13pm – Los modelos Activity ya tienen relación con el endpoint ActivityAssistance.
+2:14pm – Prueba nuevamente funcionalidad de vista actividades en la plataforma.
+2:15pm – El constructor de menú no trae la opción actividades, parece estar relacionado directamente con la información del back.
+2:50pm – Existe una relación de la información entregada al constructor del menú lateral con el usercontroller del modulo citizen portal del back.
+2:53pm – Se sigue presentando el mensaje de que no se tiene permiso para el módulo.
+2:56pm – Depuración del mensaje de error.
+3:02pm – Identificación de origen de error: citizen-portal\middleware\permissions.js:41
+3:24pm – Variable bouncer responsable de la gestión de los roles (librería de laravel) esta relacionada con la tabla abilities de la base de datos local ldap2.
+3:54pm – Adición de nuevos registros a la tabla abilities de ldap2, reinicio de servidor backend.
+4:02pm – Prueba de acceso a vista actividades.
+4:09pm – Luego de reiniciar los servicios sigue presentándose el mismo mensaje, procedo a seguir con Debug.
+4:46pm – Identificación de método permissions declarado a partir de una llamada al método desde el backend.
+5:46pm – Revisión de depuración del backend.
