@@ -94,3 +94,21 @@ Trabajo 27-09-2022
 4:09pm – Luego de reiniciar los servicios sigue presentándose el mismo mensaje, procedo a seguir con Debug.
 4:46pm – Identificación de método permissions declarado a partir de una llamada al método desde el backend.
 5:46pm – Revisión de depuración del backend.
+Trabajo 28-09-2022
+6:55am – Despliegue de desarrollo de proyecto.
+7:10am – Configuración de XDebug para depuración de back.
+7:15am – Seguimiento de guía: https://medium.com/@alirazalilani/debugging-php-laravel-with-visual-studio-code-37b756fb6c19.
+8:15am – Mensaje de consola:
+Xdebug requires Zend Engine API version 420210902.
+The Zend Engine API version 320160303 which is installed, is outdated.
+PHP 7.1.33 (cli) (built: Oct 23 2019 09:24:14) ( ZTS MSVC14 (Visual C++ 2015) x64 )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+9:00am – Reinstalación de versión 7.1.33 php.
+9:30am – Reconfiguración de php.ini para depurador e instalación de paquetes del backend.
+10:00am – Al ejecutar la consulta no pasa por permissions() del fichero roles.php o la configuración de depuración no está funcionando.
+10:30am – línea de prueba para la revisión de los permisos(abilities) del usuario autenticado actual:
+for (var i=0;i<37;i++){console.log(bouncer.abilities[i].entity_type)}.
+11:00am – investigación del método: meta.permissions(bouncer) del middleware del frontend.
+11:35am – Información posiblemente relacionada:
+https://www.youtube.com/watch?v=calcqEahVQ0
