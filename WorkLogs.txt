@@ -112,3 +112,12 @@ for (var i=0;i<37;i++){console.log(bouncer.abilities[i].entity_type)}.
 11:00am – investigación del método: meta.permissions(bouncer) del middleware del frontend.
 11:35am – Información posiblemente relacionada:
 https://www.youtube.com/watch?v=calcqEahVQ0
+Trabajo 29-09-2022
+7:40am – Revisión del archivo permissions.js en el middleware del frontend.
+7:50am – Objeto Bouncer relacionado con el método que realiza la validación de permisos.
+7:55am – Revisión del archivo Bouncer.js en carpeta utils que genera el objeto anterior.
+8:20am – Adición de registro a tabla permissions con ability_id registrado anteriormente.
+8:30am – Se presenta el mismo inconveniente de mensaje “No tienes acceso a este módulo.
+9:30am – Búsqueda de documentación sobre sistemas de permisos, roles y habilidades en laravel.
+10:30am – En el archivo permissions.js se comprueba si ‘permissions’ o ‘roles’ son una propiedad directa del objeto de meta.
+10:40am – La línea 6 del archivo permissions.js: export default async function (context), es una función asíncrona, hay que buscar el punto de uso de la función.
